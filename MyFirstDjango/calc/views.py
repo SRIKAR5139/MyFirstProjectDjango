@@ -1,7 +1,17 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 
-#myname="Srikar"
+myname="Srikar"
 
 def home(request):
-    return HttpResponse("Hello world")
+    return render(request,'home.HTML',{'name':myname})
+
+
+def add(request):
+    val1=int(request.POST['num1'])
+    val2=int(request.POST['num2'])
+    val3=val1+val2
+    return render(request,'result.HTML',{'result':val3})
+    
+    
+    #HttpResponse("Hello world")
