@@ -12,6 +12,9 @@ def add(request):
     val2=int(request.POST['num2'])
     val3=val1+val2
     return render(request,'result.HTML',{'result':val3})
-    
+
+def dashboard(request):
+    return render(request,'dashboard.HTML')
     
     #HttpResponse("Hello world")
+    
